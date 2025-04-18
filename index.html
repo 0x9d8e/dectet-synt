@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10-TET Microchromatic Synth 0.1</title>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+    <h1>10-TET Microchromatic Synth</h1>
+    <div class="controls">
+        <button id="decade-down">◄ Decade down (Shift)</button>
+        <span id="decade-display">3</span>
+        <button id="decade-up">Decade up (Ctrl) ►</button>
+    </div>
+    <div class="keyboard">
+        <div class="row">
+        	<div class="key" data-key="`"><div class="key-label">~</div><div class="key-note black-note">J</div><div class="key-freq" id="freq-`"></div></div>
+            <div class="key" data-key="1"><div class="key-label">1</div><div class="key-note">A</div><div class="key-freq" id="freq-1"></div></div>
+            <div class="key" data-key="2"><div class="key-label">2</div><div class="key-note">B</div><div class="key-freq" id="freq-2"></div></div>
+            <div class="key" data-key="3"><div class="key-label">3</div><div class="key-note">C</div><div class="key-freq" id="freq-3"></div></div>
+            <div class="key" data-key="4"><div class="key-label">4</div><div class="key-note black-note">D</div><div class="key-freq" id="freq-4"></div></div>
+            <div class="key" data-key="5"><div class="key-label">5</div><div class="key-note">E</div><div class="key-freq" id="freq-5"></div></div>
+            <div class="key" data-key="6"><div class="key-label">6</div><div class="key-note">F</div><div class="key-freq" id="freq-6"></div></div>
+            <div class="key" data-key="7"><div class="key-label">7</div><div class="key-note black-note">G</div><div class="key-freq" id="freq-7"></div></div>
+            <div class="key" data-key="8"><div class="key-label">8</div><div class="key-note">H</div><div class="key-freq" id="freq-8"></div></div>
+            <div class="key" data-key="9"><div class="key-label">9</div><div class="key-note">I</div><div class="key-freq" id="freq-9"></div></div>
+            <div class="key" data-key="0"><div class="key-label">0</div><div class="key-note black-note">J</div><div class="key-freq" id="freq-0"></div></div>
+            <div class="key" data-key="-"><div class="key-label">-</div><div class="key-note">A</div><div class="key-freq" id="freq--"></div></div>
+            <div class="key" data-key="="><div class="key-label">=</div><div class="key-note">B</div><div class="key-freq" id="freq-="></div></div>
+        </div>
+        <div class="row" style="margin-left:84px">
+            <div class="key" data-key="q"><div class="key-label">q</div><div class="key-note">A</div><div class="key-freq" id="freq-q"></div></div>
+            <div class="key" data-key="w"><div class="key-label">w</div><div class="key-note">B</div><div class="key-freq" id="freq-w"></div></div>
+            <div class="key" data-key="e"><div class="key-label">e</div><div class="key-note">C</div><div class="key-freq" id="freq-e"></div></div>
+            <div class="key" data-key="r"><div class="key-label">r</div><div class="key-note black-note">D</div><div class="key-freq" id="freq-r"></div></div>
+            <div class="key" data-key="t"><div class="key-label">t</div><div class="key-note">E</div><div class="key-freq" id="freq-t"></div></div>
+            <div class="key" data-key="y"><div class="key-label">y</div><div class="key-note">F</div><div class="key-freq" id="freq-y"></div></div>
+            <div class="key" data-key="u"><div class="key-label">u</div><div class="key-note black-note">G</div><div class="key-freq" id="freq-u"></div></div>
+            <div class="key" data-key="i"><div class="key-label">i</div><div class="key-note">H</div><div class="key-freq" id="freq-i"></div></div>
+            <div class="key" data-key="o"><div class="key-label">o</div><div class="key-note">I</div><div class="key-freq" id="freq-o"></div></div>
+            <div class="key" data-key="p"><div class="key-label">p</div><div class="key-note black-note">J</div><div class="key-freq" id="freq-p"></div></div>
+            <div class="key" data-key="["><div class="key-label">[</div><div class="key-note">A</div><div class="key-freq" id="freq-["></div></div>
+            <div class="key" data-key="]"><div class="key-label">]</div><div class="key-note">B</div><div class="key-freq" id="freq-]"></div></div>
+        </div>
+        <div class="row">
+            <div class="key" data-key="a"><div class="key-label">a</div><div class="key-note">A</div><div class="key-freq" id="freq-a"></div></div>
+            <div class="key" data-key="s"><div class="key-label">s</div><div class="key-note">B</div><div class="key-freq" id="freq-s"></div></div>
+            <div class="key" data-key="d"><div class="key-label">d</div><div class="key-note">C</div><div class="key-freq" id="freq-d"></div></div>
+            <div class="key" data-key="f"><div class="key-label">f</div><div class="key-note black-note">D</div><div class="key-freq" id="freq-f"></div></div>
+            <div class="key" data-key="g"><div class="key-label">g</div><div class="key-note">E</div><div class="key-freq" id="freq-g"></div></div>
+            <div class="key" data-key="h"><div class="key-label">h</div><div class="key-note">F</div><div class="key-freq" id="freq-h"></div></div>
+            <div class="key" data-key="j"><div class="key-label">j</div><div class="key-note black-note">G</div><div class="key-freq" id="freq-j"></div></div>
+            <div class="key" data-key="k"><div class="key-label">k</div><div class="key-note">H</div><div class="key-freq" id="freq-k"></div></div>
+            <div class="key" data-key="l"><div class="key-label">l</div><div class="key-note">I</div><div class="key-freq" id="freq-l"></div></div>
+            <div class="key" data-key=";"><div class="key-label">;</div><div class="key-note black-note">J</div><div class="key-freq" id="freq-;"></div></div>
+        </div>
+        <div class="row">
+            <div class="key" data-key="z"><div class="key-label">z</div><div class="key-note">A</div><div class="key-freq" id="freq-z"></div></div>
+            <div class="key" data-key="x"><div class="key-label">x</div><div class="key-note">B</div><div class="key-freq" id="freq-x"></div></div>
+            <div class="key" data-key="c"><div class="key-label">c</div><div class="key-note">C</div><div class="key-freq" id="freq-c"></div></div>
+            <div class="key" data-key="v"><div class="key-label">v</div><div class="key-note black-note">D</div><div class="key-freq" id="freq-v"></div></div>
+            <div class="key" data-key="b"><div class="key-label">b</div><div class="key-note">E</div><div class="key-freq" id="freq-b"></div></div>
+            <div class="key" data-key="n"><div class="key-label">n</div><div class="key-note">F</div><div class="key-freq" id="freq-n"></div></div>
+            <div class="key" data-key="m"><div class="key-label">m</div><div class="key-note black-note">G</div><div class="key-freq" id="freq-m"></div></div>
+            <div class="key" data-key=","><div class="key-label">,</div><div class="key-note">H</div><div class="key-freq" id="freq-,"></div></div>
+            <div class="key" data-key="."><div class="key-label">.</div><div class="key-note">I</div><div class="key-freq" id="freq-."></div></div>
+        </div>
+        <div class="row">
+        	<div class="key" data-key=" " style="width:400px;height:60px;"><div class="key-label">space</div><div class="key-note" style="line-height:45px;">SUSTAIN</div></div>
+        </div>
+    </div>
+    <div class="status" id="status">Pres keys to play. Max. 4 notes togeter.</div>    
+    <script src="app/script.js"></script>
+</body>
+</html> 
