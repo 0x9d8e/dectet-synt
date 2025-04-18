@@ -1,0 +1,78 @@
+body { 
+    font-family: Helvetica, sans-serif; 
+    text-align: center; 
+    margin-top: 20px;
+    background-color: #222;
+    user-select: none;
+}
+h1 {
+	color: #ddf;
+}
+.keyboard {
+    display: inline-block;
+    margin: 10px;
+    font-family: monospace;
+}
+.key {
+    display: inline-block;
+    width: 40px;
+    height: 120px;
+    margin: 2px;
+    background: #444;
+    border: 1px solid #000;
+    vertical-align: top;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.45);
+    border-radius: 0 0 5px 5px;
+}
+.key.active {
+    background: #4C4EAF;
+    color: white;
+}
+.key-label {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
+.key-note {
+	line-height: 120px;
+		font-weight: bold;
+		font-size: 30px;
+		color: #999;
+}
+.key-note.black-note {
+	color: #777;
+}
+.key-freq {
+    position: absolute;
+    top: 3px;
+    width: 100%;
+    font-size: 10px;
+    color: #888;
+}
+.row {
+    margin-bottom: 5px;
+}
+.controls {
+    margin: 15px;
+}
+.controls button {
+	background-color: #444;
+	color: #aaa;
+	border: 1px #000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.45);
+	border-radius: 5px;
+	height: 20px;
+}
+#decade-display {
+	color: #aaa;
+	margin: 10px;
+}
+.status {
+    margin: 10px;
+    font-size: 14px;
+    color: #eee;
+}
